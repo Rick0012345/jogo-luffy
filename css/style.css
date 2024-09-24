@@ -1,0 +1,72 @@
+*{margin: 0;
+ padding: 0;
+box-sizing: border-box;
+}
+
+    /* background-: #0a723d; */
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #0a723d;
+}
+
+img{
+    max-width: 300px;
+    max-height: 300px;
+}
+.kaido{
+    position: absolute;
+    z-index: 1;
+    animation: kaido-animation 10s infinite linear;
+}
+.luffy{
+    width: 250px;
+    bottom: 0px;
+    position: absolute;
+}
+.mushroom{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    animation: mushroom-animation 1s infinite linear; ;
+    z-index: 1;
+}
+
+.jump{
+    animation: luffy-animation 1.5s cubic-bezier(0.5, 0, 0.5, 1) ;
+}
+
+@keyframes mushroom-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes luffy-animation {
+    0%{
+        transform: translateY(0px);
+    }
+    
+    50%{
+       transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes kaido-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
